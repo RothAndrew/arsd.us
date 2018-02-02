@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@arsd_support">
+    <meta name="twitter:title" content="Andrew Roth Solution Development">
+    <meta name="twitter:description" content="Solution Development and I.T. Support For Your Business Needs">
+    <meta name="twitter:creator" content="@arsd_support">
+    <meta name="twitter:image:src" content="assets/images/ARSD_Logo_250x250_BW.png">
+    <meta property="og:title" content="Andrew Roth Solution Development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.arsd.us" />
+    <meta property="og:image" content="assets/images/ARSD_Logo_250x250_BW.png" />
+    <meta property="og:description" content="Solution Development and I.T. Support For Your Business Needs">
+    
+    <!--Disable Cacheing-->
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico" />
+    
+    <!-- font awesome from BootstrapCDN -->
+    <!--4.0.3 is the old version-->
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+    <!--4.5.0 is new version-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/ngbp-0.3.2.css" />
+    
+    <!--Custom CSS-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/custom.css">-->
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="assets/ngbp-0.3.2.js"></script>
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <!--Not using the +1 button so don't need this-->
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      { "parsetags": "explicit" }
+    </script>-->
+  </head>
+  <body>
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+            ng-click="menuCollapsed = ! menuCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            ARSD
+            <!--Not using version number. Don't need this-->
+            <!--<small>
+              <a href="http://github.com/ngbp/ngbp/blob/v0.3.2-release/CHANGELOG.md">
+                v0.3.2
+              </a>
+            </small>-->
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a href ui-sref="home">
+                <i class="fa fa-home fa-fw"></i>
+                Home
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="services">
+                <i class="fa fa-code fa-fw"></i>
+                Services
+              </a>
+            </li>
+            <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Products <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href ui-sref="mf_google_import">MF Google Import</a></li>
+                        <!--<li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>-->
+                      </ul>
+                    </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="contact">
+                <i class="fa fa-envelope fa-fw"></i>
+                Contact
+              </a>
+            </li>
+            <!--<li>
+              <a href="https://github.com/ngbp/ngbp#readme">
+                <i class="fa fa-book"></i>
+                Read the Docs
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ngbp/ngbp">
+                <i class="fa fa-github-alt"></i>
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ngbp/ngbp/issues">
+                <i class="fa fa-comments"></i>
+                Support
+              </a>
+            </li>-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/RothAndrew"><i class="fa fa-github-square fa-fw"></i> Github</a></li>
+            <li><a href="https://www.linkedin.com/in/andrewrothsolutiondevelopment"><i class="fa fa-linkedin-square fa-fw"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          
+          
+          <!--<ul class="social">
+            <li><a target="_blank" href="http://gplus.to/joshdmiller"><i class="fa fa-google-plus-sign"></i></a></li>
+            <li><a target="_blank" href="http://twitter.com/joshdmiller"><i class="fa fa-twitter-sign"></i></a></li>
+            <li><a target="_blank" href="http://linkedin.com/in/joshdmiller"><i class="fa fa-linkedin-sign"></i></a></li>
+            <li><a target="_blank" href="http://github.com/ngbp/ngbp"><i class="fa fa-github-sign"></i></a></li>
+          </ul>-->
+          
+          <p>
+            <i class="fa fa-copyright"></i> 2016 Andrew Roth. Built on <a href="https://github.com/ngbp/ngbp">ngbp</a>.
+          </p>
+          
+          <!--<p>
+            ngbp <i class="fa fa-copyright"></i> 2013 <a href="http://www.joshdavidmiller.com">Josh David Miller</a>. 
+            <a href="http://github.com/ngbp/ngbp/fork_select">Fork this</a>
+            to kickstart your next project.
+            <br />
+            ngbp is based on
+            <a href="http://www.angularjs.org">AngularJS</a>,
+            <a href="http://getbootstrap.com">Bootstrap</a>, 
+            <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
+            and 
+            <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.        
+          </p>-->
+        </div>
+      </div>
+    </footer>
+  </body>
+  <HEAD>
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+  </HEAD>
+</html>
